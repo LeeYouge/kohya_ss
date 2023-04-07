@@ -222,7 +222,9 @@ install_python_dependencies() {
   else
     echo "Valid python3 or python3.10 binary not found."
     echo "Cannot proceed with the python steps."
-    return 1
+    #return 1
+    echo "please pip install virtualenv for this step"
+    virtualenv "$DIR/venv"
   fi
 
   # Activate the virtual environment
